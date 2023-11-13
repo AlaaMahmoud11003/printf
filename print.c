@@ -8,7 +8,7 @@
 int _printf(const char *form, ...)
 {
 	va_list arc;
-	int f, num = 0;
+	int i, num = 0;
 	const char *ptr = form;
 	bool mh;
 	specifier_t format_spec[] = {{"c", myform_char}, {"s", myform_string},
@@ -29,10 +29,10 @@ int _printf(const char *form, ...)
 		if (*ptr == ' ' || *ptr == '\0')
 			return (-1);
 		mh = false;
-		for (f = 0; format_spec[f].specifier != NULL; f++)
-			if (*ptr == *(format_spec[f].specifier))
+		for (i = 0; format_spec[i].specifier != NULL; i++)
+			if (*ptr == *(format_spec[i].specifier))
 			{
-				num += format_spec[f].f(arc);
+				num += format_spec[i].f(arc);
 				mh = true;
 				break;
 			}
