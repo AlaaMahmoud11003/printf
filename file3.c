@@ -25,9 +25,9 @@ int myprint_binary(unsigned int n)
 		{
 			nums += my_putchar('0');
 			ex /= 2;
-			checks = n / (exp / 2);
+			checks = n / (ex / 2);
 		}
-		n %= exp;
+		n %= ex;
 		ex /= 2;
 	}
 	nums += my_putchar('0' + n);
@@ -40,7 +40,7 @@ int myprint_binary(unsigned int n)
  */
 int myprint_int(int i)
 {
-	int dig, qout, ceck;
+	int dig, qoutt, ceck;
 	int ex = 1, t = 0;
 
 	if (i < 0)

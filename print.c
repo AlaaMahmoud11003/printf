@@ -15,14 +15,14 @@ int my_printf(const char *form, ...)
 		{"%", myform_percent}, {"d", myform_int}, {"i", myform_int}, {"b", myform_binary},
 		{NULL, NULL}};
 
-	if (format == NULL)
+	if (form == NULL)
 		return (-1);
-	va_start(argf, format);
+	va_start(arc, form);
 	while (*ptr)
 	{
 		if (*ptr != '%')
 		{
-			num += _putchar(*ptr++);
+			num += my_putchar(*ptr++);
 			continue;
 		}
 		ptr++;
