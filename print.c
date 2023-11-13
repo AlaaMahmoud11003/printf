@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * my_printf -  funtion that prints different data types
+ * _printf -  funtion that prints different data types
  * @form: string
  * Return: 1
  */
-int my_printf(const char *form, ...)
+int _printf(const char *form, ...)
 {
 	va_list arc;
 	int f, num = 0;

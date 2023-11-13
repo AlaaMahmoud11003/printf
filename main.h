@@ -16,7 +16,7 @@ typedef struct specifier
 	int (*funse)(va_list);
 } specifier_t;
 
-int my_printf(const char *form, ...);
+int _printf(const char *form, ...);
 int my_putchar(char b);
 int my_puts(char *x);
 int myform_char(va_list arc);
